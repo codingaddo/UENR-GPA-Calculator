@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UENR GPA Calculator</title>
+    <link rel="stylesheet" href="gpa.css">
+   <script src="gpa.js" defer></script> 
+
+</head>
+<body>
+    <header>
+        <h2>UENR GPA Calculator</h2>
+    </header>
+    <main class="main">
+        <div class="inputContainer">
+            <i>Enter Total Number Of Courses</i>
+            <div class="courses">
+                <input type="text" id="Ncourses" placeholder="0" required>
+                <button id="courseBtn">Enter</button>
+            </div>
+            <div class="creditH">
+                <div class="txt">
+                    <i>Please Enter Each Score and it's <br> Corresponding Credit Hours Respectively<i>
+                </div>
+                <div class="txtinp">
+                    <input type="text" id="score" placeholder="Score" required>
+                    <input type="text" id="credit" placeholder="credit" required>
+                    <button id="scoreBtn" type="submit">Enter</button>
+                </div>
+            </div>
+            <div class="cal">
+                <button class="calBtn" id="calBtn">Calculate</button>
+            </div>
+        </div>
+        <div class="display">
+            <section>
+                <label for="">No. Coureses</label>
+                <div class="totalCourse" id="tcourse"></div>
+            </section>
+            <section>
+                <label for="">Total Credit Hours</label>
+                <div class="totalCredit" id="tcredit"></div>
+            </section>
+            <section>
+                <label for="">GPA</label>
+                <div class="gpa" id="gpa"></div>
+            </section>
+            <section>
+                <label for="">Class</label>
+                <div class="class" id="class"></div>
+            </section>
+        </div>
+
+        <button class="clear" id="clear" onclick="location.reload()">Clear</button>
+    </main>
+
+
+
+</body>
+</html>
