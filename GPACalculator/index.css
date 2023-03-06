@@ -27,6 +27,8 @@ body{
     padding:20px;
     border: none;
     box-shadow: 0 0 5px rgb(56, 68, 1.5);
+    align-items: center;
+    justify-content: center;
 }
 .inputContainer{
     display: flex;
@@ -108,7 +110,7 @@ button:hover{
 
 .clear{
     position: relative;
-    left: 500px;
+    left: 160px;
     top:0px;
     background-color: rgb(235, 31, 31);
     
