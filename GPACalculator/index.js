@@ -29,14 +29,14 @@ enterCosNum.addEventListener('click',()=>{
 
     const getScore=()=>{
         let scoreValue = score.value
-        let scoreValueNumber =Number(scoreValue)
+        let scoreValueNumber = +scoreValue;
 
         return scoreValueNumber
     }
 
     const getCredit = ()=>{
         let creditValue =credit.value
-        let creditValueNumber =Number(creditValue)
+        let creditValueNumber = +creditValue
 
         return creditValueNumber
     }
@@ -88,6 +88,8 @@ enterCosNum.addEventListener('click',()=>{
             
             if(creditNumbers.length==TotalCourse && scoreNumbers.length==TotalCourse){
                 calBtn.style.display = "block"
+                scoreCrdBtn.style.display = "none"
+                enterCosNum.style.display = "none"
                 for(i=0;i<TotalCourse;i++){
                     multGPC.push(gradePoint[i]*creditNumbers[i])
                 }
