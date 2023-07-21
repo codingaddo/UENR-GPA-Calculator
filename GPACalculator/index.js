@@ -1,3 +1,4 @@
+const container = document.querySelector('.inputContainer')
 const course = document.getElementById('Ncourses')
 const enterCosNum = document.getElementById('courseBtn') 
 const score = document.getElementById('score')
@@ -14,30 +15,44 @@ let scoreNumbers = [];
 let gradePoint =[];
 let multGPC = []
 
+
+function validateNumericInput(inputElement) {
+  const numericInput = inputElement.value;
+  const numericRegex = /^[0-9]*$/;
+
+  if (!numericRegex.test(numericInput)) {
+    // If non-numeric characters are detected, remove them from the input
+    inputElement.value = numericInput.replace(/\D/g, '');
+  }
+}
+
+
 const getNumberOfCourse = ()=>{
     let courseValue = course.value
-    if(courseValue==''){
-        alert("can't be empty")
-    }
+    courseValue !==''? courseValue: alert("can't be empty")
+    
+
+    // if(courseValue==''){
+    //     alert("can't be empty")
+    // }
 
     return courseValue;
 }
 
 enterCosNum.addEventListener('click',()=>{
     let TotalCourse = getNumberOfCourse()
-    console.log(TotalCourse)
+    console.log('Total number of courses = '+TotalCourse)
 
     const getScore=()=>{
         let scoreValue = score.value
-        let scoreValueNumber = +scoreValue;
+        let scoreValueNumber = +scoreValue;  //converting the text string to number
 
         return scoreValueNumber
     }
 
     const getCredit = ()=>{
         let creditValue =credit.value
-        let creditValueNumber = +creditValue
-
+        let creditValueNumber = +creditValue //converting the text string to number
         return creditValueNumber
     }
     getCredit()
@@ -87,6 +102,7 @@ enterCosNum.addEventListener('click',()=>{
             
             
             if(creditNumbers.length==TotalCourse && scoreNumbers.length==TotalCourse){
+                container.style.display='none'
                 calBtn.style.display = "block"
                 scoreCrdBtn.style.display = "none"
                 enterCosNum.style.display = "none"
