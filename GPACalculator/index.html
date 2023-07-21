@@ -17,7 +17,7 @@
         <div class="inputContainer">
             <i>Enter Total Number Of Courses</i>
             <div class="courses">
-                <input type="text" id="Ncourses" placeholder="0" required>
+                <input type="text" id="Ncourses" placeholder="0" required  pattern="[0-9]*" oninput="validateNumericInput(this)">
                 <button id="courseBtn">Enter</button>
             </div>
             <div class="creditH">
@@ -25,14 +25,14 @@
                     <i>Please Enter Each Score and it's <br> Corresponding Credit Hours Respectively<i>
                 </div>
                 <div class="txtinp">
-                    <input type="text" id="score" placeholder="Score" required>
-                    <input type="text" id="credit" placeholder="credit" required>
+                    <input type="text" id="score" placeholder="Score" required pattern="[0-9]*" oninput="validateNumericInput(this)">
+                    <input type="text" id="credit" placeholder="credit" required pattern="[0-9]*" oninput="validateNumericInput(this)">
                     <button id="scoreBtn" type="submit">Enter</button>
                 </div>
             </div>
-            <div class="cal">
-                <button class="calBtn" id="calBtn">Calculate</button>
-            </div>
+        </div>
+        <div class="cal">
+            <button class="calBtn" id="calBtn">Calculate</button>
         </div>
         <div class="display">
             <section>
@@ -53,7 +53,7 @@
             </section>
         </div>
 
-        <button class="clear" id="clear" onClick="location.reload()">Clear</button>
+        <button class="clear" id="clear" onClick="location.reload()">Reload</button>
     </main>
 
 
