@@ -1,5 +1,5 @@
 const container = document.querySelector('.inputContainer')
-const course = document.getElementById('Ncourses')
+let course = document.getElementById('Ncourses')
 const enterCosNum = document.getElementById('courseBtn') 
 const score = document.getElementById('score')
 const credit =document.getElementById('credit')
@@ -42,6 +42,7 @@ const getNumberOfCourse = ()=>{
 enterCosNum.addEventListener('click',()=>{
     let TotalCourse = getNumberOfCourse()
     console.log('Total number of courses = '+TotalCourse)
+
 
     const getScore=()=>{
         let scoreValue = score.value
@@ -111,18 +112,18 @@ enterCosNum.addEventListener('click',()=>{
                 }
                 let totalGPC = multGPC.reduce((x,y)=>x+y)
                 let creditsum = creditNumbers.reduce((a,b)=>a+b)
-                console.log("Scores = " + scoreNumbers)
-                console.log("Respective Credit hours = " + creditNumbers)
-                console.log("Respective grade points = " + gradePoint)
-                console.log(multGPC)
-                console.log(totalGPC)
-                console.log("Total credit hours = " + creditsum)
+                // console.log("Scores = " + scoreNumbers)
+                // console.log("Respective Credit hours = " + creditNumbers)
+                // console.log("Respective grade points = " + gradePoint)
+                // console.log(multGPC)
+                // console.log(totalGPC)
+                // console.log("Total credit hours = " + creditsum)
 
                 calBtn.addEventListener('click',()=>{
                     let GPA = totalGPC/creditsum
                     let result = GPA.toFixed(2)
                     let honour = "";
-                    console.log("GPA" + " "+ result)
+                    // console.log("GPA" + " "+ result)
                     if(result>=3.60 && result<=4.00){
                         honour = "1st class"
                     }
